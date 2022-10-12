@@ -1,6 +1,6 @@
 @font-face {
     font-family: "goodUnicorn";
-    src: url(assets\Fonts\GoodUnicornRegular-Rxev.ttf);
+    src: url(GoodUnicornRegular-Rxev.ttf);
 }
 
 h1, h2 {
@@ -18,9 +18,12 @@ h2 {
     font-size: 30px;
     margin: 0;
 }
-/* Make background a light purple with misty and whispy clouds throughout*/
+
 body {
-    background-color: rgb(169, 111, 169);
+    /* Make background a light purple with misty and whispy clouds throughout*/
+    background-image: url("pics/crystalball.png"), url("pics/purpleclouds.jpg");
+    background-color: rgb(173, 112, 173);
+    background-size: 750px, 1700px;
     /* Keep the background in a neutral position while the main div is scrolled */
     position: relative;
 }
