@@ -2,9 +2,9 @@
 
 //Allow user to enter information in each form. Use event listeners
 
-//Allow user to draw on notepad. use event listeners
-
-//Count the spirals they draw and display that number to them
+//Allow user to play a mini-game in which they catch hearts, cash, babies, and avoid bombs in an allotted time
+//Hearts, cash, and babies earn player 1 point each but bombs earn -2 points
+//Keep score, and when time runs out display that number to them
 
 //That number will be used to count how many answers to skip over before crossing them out and eliminating them from the fortune
 

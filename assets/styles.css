@@ -1,6 +1,6 @@
 @font-face {
     font-family: "goodUnicorn";
-    src: url(GoodUnicornRegular-Rxev.ttf);
+    src: url(assets\Fonts\GoodUnicornRegular-Rxev.ttf);
 }
 
 h1, h2 {
@@ -8,11 +8,35 @@ h1, h2 {
     color: black;
     text-align: center;
 }
-/* Make background a light purple with misty and whispy clouds throughout*/
 
+h1 {
+    font-size: 100px;
+    margin: 0;
+}
+
+h2 {
+    font-size: 30px;
+    margin: 0;
+}
+/* Make background a light purple with misty and whispy clouds throughout*/
+body {
+    background-color: rgb(169, 111, 169);
+    /* Keep the background in a neutral position while the main div is scrolled */
+    position: relative;
+}
+
+.main {
+    background-color: rgb(208, 163, 208);
+    text-align: center;
+    margin: auto;
+    padding: 1em;
+    width: 600px;
+    height: 500px;
+    border: 4px solid pink;
+}
 /* Make margins for main div take up about 1/3 of the full width of the page */
 
-/* Keep the background in a neutral position while the main div is scrolled */
+
 
 /* Put a large pink crystal ball on either side of the main div */
 
