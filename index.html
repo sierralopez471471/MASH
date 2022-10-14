@@ -11,20 +11,27 @@
     </head>
     <body>
         <!--HOMEPAGE-->
+        
         <script src="assets\script.js"></script>
+
         <!--Put the game in a separate main div that sits on top of the background -->
         <main>
             <h1>M.A.S.H.</h1>
             <h2>Predict Your Future</h2>
+
             <div class="homepage-images">
                 <img id="mansion" src="assets\pics\mansion.png" alt="Mega Mansion">
                 <img id="apt" src="assets\pics\apartment.png" alt="Adequate Apartment">
+            </div>
+            <div class="homepage-images-second-row">
                 <img id="sewer" src="assets\pics\sewer.png" alt="Sick Swamp">
                 <img id="house" src="assets\pics\house.png" alt="Humble House">
-                
             </div>
-            <!--Add a button that says Play New Game that clears all the data for a new game-->
-            <button type="button">Start New Game</button>
+
+            <form>
+                <button formaction="results.html">Start New Game!</button>
+            </form>
+            
             <!--Ask user to enter three of each: colleges, people, cities, numbers, cars and occupations-->
             <!--Add button that says Contiue-->
 
