@@ -70,6 +70,8 @@ button {
     width: 50%;
     padding: 12px 28px;
     border-radius: 12px;
+    font-family: goodUnicorn;
+    font-size: 25px;
 }
   
 button:hover {
@@ -79,10 +81,28 @@ button:hover {
 
 #home-btn {
     width: 25%;
+    font-family: goodUnicorn;
+    font-size: 20px;
+    padding: 5px;
 }
 
 #continue-btn {
     width: 25%;
+    font-family: goodUnicorn;
+    font-size: 20px;
+    padding: 5px;
+}
+
+#play-btn {
+    width: 15%;
+    font-family: goodUnicorn;
+    font-size: 20px;
+    padding: 5px;
+}
+
+#clear-btn {
+    width: 50%;
+    
 }
 /* Make font sans-serif? I'd like it to be cute and soft */
 
