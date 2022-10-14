@@ -10,14 +10,14 @@
 
     </head>
     <body>
-        <!--HOMEPAGE-->
+        <!--FORM 1-->
         
         <script src="assets\script.js"></script>
 
         <!--Put the game in a separate main div that sits on top of the background -->
         <main>
-            <h1>M.A.S.H.</h1>
-            <h2>Predict Your Future</h2>
+            <h2>M.A.S.H.</h2>
+            
 
             <div class="homepage-images">
                 <img id="mansion" src="assets\pics\mansion.png" alt="Mega Mansion">
@@ -27,12 +27,16 @@
                 <img id="sewer" src="assets\pics\sewer.png" alt="Sick Swamp">
                 <img id="house" src="assets\pics\house.png" alt="Humble House">
             </div>
-            
-            <form>
-                <button formaction="peopleform.html">Start New Game!</button>
-            </form>
 
-            <!--Ask user to enter three of each: colleges, people, cities, numbers, cars and occupations-->
+            <form>
+                <button id="home-btn" formaction="index.html">Return To Home</button>
+            </form>
+            <!-- add a submit button that saves inputs and make sure it is disabled after clicked-->
+            <form>
+                <button id="continue-btn" formaction="collegform.html">Continue</button>
+            </form>
+            
+            <!--Ask user to enter three of each: colleges, majors, people, cities, numbers, cars and occupations-->
             <!--Add button that says Contiue-->
 
             <!--Ask user to play mini-game-->
@@ -48,6 +52,4 @@
 
 
 
-</html><!--preventdefault mulipage form in javascript-->
-
-
+</html>

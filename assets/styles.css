@@ -76,6 +76,14 @@ button:hover {
     background-color: #4CAF50;
     color: white;
 }
+
+#home-btn {
+    width: 25%;
+}
+
+#continue-btn {
+    width: 25%;
+}
 /* Make font sans-serif? I'd like it to be cute and soft */
 
 /* center minigame div */
