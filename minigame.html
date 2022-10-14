@@ -10,26 +10,34 @@
 
     </head>
     <body>
-        <!--FORM 1-->
+        <!--MINIGAME-->
         
         <script src="assets\script.js"></script>
 
         <!--Put the game in a separate main div that sits on top of the background -->
         <main>
             <h2>M.A.S.H.</h2>
+
+            <!--mini-game instructions-->
             
-
-            <!--minigame-->
-
+            <div id="game">
+                <!--minigame-->
+                <div id="character"></div>
+            </div>
+            
             <form>
                 <button id="home-btn" formaction="index.html">Return To Home</button>
             </form>
             <form>
+                <!--Add button that says Play-->
                 <button id="play-btn">Play</button>
             </form>
+            <!--Display Sorry, you need to score atleast 3 points to move on.-->
+            <!--Add button that says Try Again-->
             <form>
                 <button id="continue-btn" formaction="list.html">Continue</button>
             </form>
+        </main>
+    </body>
+</html>
             
-            <!--Ask user to enter three colleges-->
-            <!--Add button that says Contiue-->
