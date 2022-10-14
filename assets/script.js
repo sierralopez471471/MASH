@@ -13,3 +13,12 @@
 //Stop the elimination of answers in each div after there is only one answer left
 //Once there is only one answer left in each div, stop elimination all together and display fortune
 
+
+
+//FOR EVERY HTML PAGE AFTER HOMEPAGE
+{/* <form method="GET" action="results.html">
+            <div>
+                <!--required field asterisks and min/max restricitons-->
+                <label for="names"> Choose 3 people <span class="required-field">*</span></label>
+                <input type="text" id="names" name="names" required minlength="2" maxlength="35"></input> 
+            </div>*/}
