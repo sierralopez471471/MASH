@@ -29,9 +29,13 @@ body {
     position: relative;
 }
 
-main {
-    background-color: rgb(208, 163, 208);
+.container {
+    display: flex;
+    min-height: 90vh;
+    flex-direction: column;
     text-align: center;
+    justify-content: space-between;
+    background-color: rgb(208, 163, 208);
     margin: auto;
     padding: 1em;
     width: 650px;
@@ -44,6 +48,10 @@ main {
 .homepage-images, .homepage-images-second-row {
     display: inline-block;
 }
+
+/* .forms {
+  
+} */
 
 #mansion {
     max-width: 25%;
@@ -80,13 +88,7 @@ button:hover {
 }
 
 #home-btn {
-    width: 25%;
-    font-family: goodUnicorn;
-    font-size: 20px;
-    padding: 5px;
-}
-
-#continue-btn {
+    /* float: left; */
     width: 25%;
     font-family: goodUnicorn;
     font-size: 20px;
@@ -95,6 +97,16 @@ button:hover {
 
 #play-btn {
     width: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: goodUnicorn;
+    font-size: 20px;
+    padding: 5px;
+}
+
+#continue-btn {
+    /* float: right; */
+    width: 25%;
     font-family: goodUnicorn;
     font-size: 20px;
     padding: 5px;
@@ -102,7 +114,6 @@ button:hover {
 
 #clear-btn {
     width: 50%;
-    
 }
 /* Make font sans-serif? I'd like it to be cute and soft */
 

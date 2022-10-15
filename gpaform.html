@@ -10,23 +10,30 @@
 
     </head>
     <body>
-        <!--FORM 1-->
+        <!--GPA-->
         
         <script src="assets\script.js"></script>
 
         <!--Put the game in a separate main div that sits on top of the background -->
-        <main>
+        <main class="container">
             <h2>M.A.S.H.</h2>
+            <h2>Choose Any 3 Numbers Between 2.00 And 4.00</h2>
             
+            <div class="forms">
+                <!--Ask user to enter three numbers between 2.00 and 4.00-->
+                
 
-            <div class="homepage-images">
-                <img id="mansion" src="assets\pics\mansion.png" alt="Mega Mansion">
-                <img id="apt" src="assets\pics\apartment.png" alt="Adequate Apartment">
+                <label class = "form-label" for = "gpa">1</label>
+                <input class = "form-control mb-3" id = "gpa" type = "text">
+
+                <label class = "form-label" for = "gpa">2</label>
+                <input class = "form-control mb-3" id = "gpa" type = "text">
+
+                <label class = "form-label" for = "gpa">3</label>
+                <input class = "form-control mb-3" id = "gpa" type = "text">
             </div>
-            <div class="homepage-images-second-row">
-                <img id="sewer" src="assets\pics\sewer.png" alt="Sick Sewer">
-                <img id="house" src="assets\pics\house.png" alt="Humble House">
-            </div>
+
+            
 <!--Ask user to enter three numbers between 2.0-4.0-->
             <form>
                 <button id="home-btn" formaction="index.html">Return To Home</button>

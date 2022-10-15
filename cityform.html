@@ -10,23 +10,27 @@
 
     </head>
     <body>
-        <!--FORM 1-->
+        <!--CITIES-->
         
         <script src="assets\script.js"></script>
 
         <!--Put the game in a separate main div that sits on top of the background -->
-        <main>
+        <main class="container">
             <h2>M.A.S.H.</h2>
-            
+            <h2>Choose 3 Cities</h2>
 
-            <div class="homepage-images">
-                <img id="mansion" src="assets\pics\mansion.png" alt="Mega Mansion">
-                <img id="apt" src="assets\pics\apartment.png" alt="Adequate Apartment">
+            <div class="forms">
+                <!--Ask user to enter three cities-->
+                <label class = "form-label" for = "cities">1</label>
+                <input class = "form-control mb-3" id = "cities" type = "text">
+
+                <label class = "form-label" for = "cities">2</label>
+                <input class = "form-control mb-3" id = "cities" type = "text">
+
+                <label class = "form-label" for = "cities">3</label>
+                <input class = "form-control mb-3" id = "cities" type = "text">
             </div>
-            <div class="homepage-images-second-row">
-                <img id="sewer" src="assets\pics\sewer.png" alt="Sick Sewer">
-                <img id="house" src="assets\pics\house.png" alt="Humble House">
-            </div>
+
 <!--Ask user to enter three cities-->
             <form>
                 <button id="home-btn" formaction="index.html">Return To Home</button>
