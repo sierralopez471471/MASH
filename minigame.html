@@ -16,7 +16,7 @@
 
         <!--Put the game in a separate main div that sits on top of the background -->
         <main class="container">
-            <h2>M.A.S.H.</h2>
+            <h1>M.A.S.H.</h1>
 
             <!--mini-game instructions-->
             <p><b>Move the character across the screen 
@@ -27,20 +27,23 @@
             <div id="game">
                 <!--minigame-->
                 <div id="character"></div>
+                <form>
+                    <!--Add button that says Play-->
+                    <button id="play-btn">Play</button>
+                    <!--Display Sorry, you need to score atleast 3 points to move on.-->
+                    <!--Add button that says Try Again-->
+                </form>
             </div>
-            
-            <form>
-                <button id="home-btn" formaction="index.html">Return To Home</button>
-            </form>
-            <form>
-                <!--Add button that says Play-->
-                <button id="play-btn">Play</button>
-            </form>
-            <!--Display Sorry, you need to score atleast 3 points to move on.-->
-            <!--Add button that says Try Again-->
-            <form>
-                <button id="continue-btn" formaction="list.html">Continue</button>
-            </form>
+            <div class="bottom-btns">
+                <form>
+                    <button id="home-btn" formaction="index.html">Return To Home</button>
+                </form>
+                
+                <form>
+                    <button id="continue-btn" formaction="list.html">Continue</button>
+                </form>
+            </div>
+           
         </main>
     </body>
 </html>

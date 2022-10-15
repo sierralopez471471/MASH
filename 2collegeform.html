@@ -16,9 +16,9 @@
 
         <!--Put the game in a separate main div that sits on top of the background -->
         <main class="container">
-            <h2>M.A.S.H.</h2>
+            <h1>M.A.S.H.</h1>
             <h2>Choose 3 Colleges</h2>
-            
+
             <div class="forms">
                 <!--Ask user to enter three colleges-->
                 
@@ -32,15 +32,20 @@
                 <label class = "form-label" for = "college">3</label>
                 <input class = "form-control mb-3" id = "college" type = "text">
             </div>
-
             <form>
-                <button id="home-btn" formaction="index.html">Return To Home</button>
+                <button id="submit-btn">Submit</button>
             </form>
-             <!--have a submit button that then gets picked up by eventlistener and the info gets added to an object array. preventdefault mulipage form in javascript-->
-            <!-- add a submit button that saves inputs and make sure it is disabled after clicked-->
-            <form>
-                <button id="continue-btn" formaction="animalform.html">Continue</button>
-            </form>
+            <div class="bottom-btns">
+                <form>
+                    <button id="home-btn" formaction="index.html">Return To Home</button>
+                </form>
+                 <!--have a submit button that then gets picked up by eventlistener and the info gets added to an object array. preventdefault mulipage form in javascript-->
+                <!-- add a submit button that saves inputs and make sure it is disabled after clicked-->
+                <form>
+                    <button id="continue-btn" formaction="3animalform.html">Continue</button>
+                </form>
+            </div>
+    
         </main>
     </body>
 </html>
