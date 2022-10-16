@@ -21,5 +21,10 @@
                 <input type="text" id="names" name="names" required minlength="2" maxlength="35"></input> 
             </div>*/}
 
-            //Image by macrovector on Freepik - college building
-            //
+// function newImage(url){
+//   let image = document.createElement('img')
+//   image.src = url
+//   image.style.position = 'absolute'
+//   document.body.append(image)
+//   return image
+// }
