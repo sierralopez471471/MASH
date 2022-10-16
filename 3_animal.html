@@ -10,28 +10,27 @@
 
     </head>
     <body>
-        <!--GPA-->
+        <!--ANIMALS-->
         
         <script src="assets\script.js"></script>
 
         <!--Put the game in a separate main div that sits on top of the background -->
         <main class="container">
             <h1>M.A.S.H.</h1>
-            <h2>Choose Any 3 Numbers Between 2.00 And 4.00</h2>
+            <h2>Choose 3 Animals</h2>
 
-            <div class="forms">
-                <!--Ask user to enter three numbers between 2.00 and 4.00-->
-                
-
-                <label class = "form-label" for = "gpa">1</label>
-                <input class = "form-control mb-3" id = "gpa" type = "text">
-
-                <label class = "form-label" for = "gpa">2</label>
-                <input class = "form-control mb-3" id = "gpa" type = "text">
-
-                <label class = "form-label" for = "gpa">3</label>
-                <input class = "form-control mb-3" id = "gpa" type = "text">
-            </div>
+            <span>
+                <label class = "form-label" for = "animal">1</label>
+                <input class = "form-control mb-3" id = "animal" type = "text" required minlength="2" maxlength="35"></input>
+            </span>
+            <span>
+                <label class = "form-label" for = "animal">2</label>
+                <input class = "form-control mb-3" id = "animal" type = "text" required minlength="3" maxlength="35"></input>
+            </span>
+            <span>
+                <label class = "form-label" for = "animal">3</label>
+                <input class = "form-control mb-3" id = "animal" type = "text" required minlength="2" maxlength="35"></input>
+            </span>
 
             <form>
                 <button id="submit-btn">Submit</button>
@@ -43,11 +42,13 @@
                 <!--have a submit button that then gets picked up by eventlistener and the info gets added to an object array. preventdefault mulipage form in javascript-->
                 <!-- add a submit button that saves inputs and make sure it is disabled after clicked-->
                 <form>
-                    <button id="continue-btn" formaction="8jobform.html">Continue</button>
+                    <button id="continue-btn" formaction="4_car.html">Continue</button>
                 </form>
             </div>
-            
         </main>
     </body>
 </html>
+
+            
+            
             

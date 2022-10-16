@@ -10,26 +10,28 @@
 
     </head>
     <body>
-        <!--CITIES-->
+        <!--CARS-->
         
         <script src="assets\script.js"></script>
 
         <!--Put the game in a separate main div that sits on top of the background -->
         <main class="container">
             <h1>M.A.S.H.</h1>
-            <h2>Choose 3 Cities</h2>
+            <h2>Choose 3 Vehicles</h2>
 
-            <div class="forms">
-                <!--Ask user to enter three cities-->
-                <label class = "form-label" for = "cities">1</label>
-                <input class = "form-control mb-3" id = "cities" type = "text">
-
-                <label class = "form-label" for = "cities">2</label>
-                <input class = "form-control mb-3" id = "cities" type = "text">
-
-                <label class = "form-label" for = "cities">3</label>
-                <input class = "form-control mb-3" id = "cities" type = "text">
-            </div>
+            <span>
+                <label class = "form-label" for = "car">1</label>
+                <input class = "form-control mb-3" id = "car" type = "text" required minlength="2" maxlength="35"></input>
+            </span>
+            <span>
+                <label class = "form-label" for = "car">2</label>
+                <input class = "form-control mb-3" id = "car" type = "text" required minlength="2" maxlength="35"></input>
+            </span>
+            <span>
+                <label class = "form-label" for = "car">3</label>
+                <input class = "form-control mb-3" id = "car" type = "text" required minlength="2" maxlength="35"></input>
+            </span>
+                
             <form>
                 <button id="submit-btn">Submit</button>
             </form>
@@ -40,7 +42,7 @@
                 <!--have a submit button that then gets picked up by eventlistener and the info gets added to an object array. preventdefault mulipage form in javascript-->
                 <!-- add a submit button that saves inputs and make sure it is disabled after clicked-->
                 <form>
-                    <button id="continue-btn" formaction="6numberform.html">Continue</button>
+                    <button id="continue-btn" formaction="5_city.html">Continue</button>
                 </form>
             </div>
             

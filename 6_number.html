@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MASH</title>
+        <link rel="stylesheet" href="assets\styles.css">
+        
+<!--Bootstrap cdn-->
+
+    </head>
+    <body>
+        <!--NUMBERS-->
+        
+        <script src="assets\script.js"></script>
+
+        <!--Put the game in a separate main div that sits on top of the background -->
+        <main class="container">
+            <h1>M.A.S.H.</h1>
+            <h2>Choose 3 Numbers</h2>
+
+            <span>
+                <label class = "form-label" for = "numbers">1</label>
+                <input class = "form-control mb-3" id = "numbers" type = "number" required minlength="1" maxlength="20"></input>
+            </span>
+            <span>
+                <label class = "form-label" for = "numbers">2</label>
+                <input class = "form-control mb-3" id = "numbers" type = "number" required minlength="1" maxlength="20"></input>
+            </span>
+            <span>
+                <label class = "form-label" for = "numbers">3</label>
+                <input class = "form-control mb-3" id = "numbers" type = "number" required minlength="1" maxlength="20"></input>
+            </span>
+                
+            <form>
+                <button id="submit-btn">Submit</button>
+            </form>
+            <div class="bottom-btn">
+                <form>
+                    <button id="home-btn" formaction="index.html">Return To Home</button>
+                </form>
+                <!-- add a submit button that saves inputs and make sure it is disabled after clicked-->
+                <form>
+                    <button id="continue-btn" formaction="7_gpa.html">Continue</button>
+                </form>
+            </div>
+            <!-- add a submit button that saves inputs and make sure it is disabled after clicked-->
+            <!--have a submit button that then gets picked up by eventlistener and the info gets added to an object array. preventdefault mulipage form in javascript-->
+        </main>
+    </body>
+</html>

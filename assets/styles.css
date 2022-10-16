@@ -19,13 +19,15 @@ h2 {
     margin: 0;
 }
 
+p {
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
 body {
-    /* Make background a light purple with misty and whispy clouds throughout*/
-    /* Put a large pink crystal ball on either side of the main div */
     background-image: url("pics/crystalball.png"), url("pics/purpleclouds.jpg");
     background-color: rgb(173, 112, 173);
     background-size: 750px, 1700px;
-    /* Keep the background in a neutral position while the main div is scrolled */
     position: relative;
 }
 
@@ -49,10 +51,6 @@ body {
     display: inline-block;
 }
 
-/* .forms {
-  
-} */
-
 #mansion {
     max-width: 25%;
     padding: 1em;
@@ -71,6 +69,10 @@ body {
 #house {
     max-width: 25%;
     padding: 1em;
+}
+
+input { 
+    width: 300px;
 }
 
 button {
@@ -124,12 +126,13 @@ button:hover {
 #clear-btn {
     width: 50%;
 }
+
 /* Make font sans-serif? I'd like it to be cute and soft */
 
 /* center minigame div */
 
 /* Add animation of pencil skip over answers and crossing them out */
 
-/* Make sure to put a line through the answers that get "crossed out" by the pencil */
+/* put a line through the answers that get "crossed out" by the pencil */
 
 

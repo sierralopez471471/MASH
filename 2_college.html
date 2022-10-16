@@ -19,19 +19,21 @@
             <h1>M.A.S.H.</h1>
             <h2>Choose 3 Colleges</h2>
 
-            <div class="forms">
                 <!--Ask user to enter three colleges-->
                 
-
+            <span>
                 <label class = "form-label" for = "college">1</label>
-                <input class = "form-control mb-3" id = "college" type = "text">
-
+                <input class = "form-control mb-3" id = "college" type = "text" required minlength="2" maxlength="35"></input>
+            </span>
+            <span>
                 <label class = "form-label" for = "college">2</label>
-                <input class = "form-control mb-3" id = "college" type = "text">
-
+                <input class = "form-control mb-3" id = "college" type = "text" required minlength="2" maxlength="35"></input>
+            </span>
+            <span>
                 <label class = "form-label" for = "college">3</label>
-                <input class = "form-control mb-3" id = "college" type = "text">
-            </div>
+                <input class = "form-control mb-3" id = "college" type = "text" required minlength="2" maxlength="35"></input>
+            </span>
+            
             <form>
                 <button id="submit-btn">Submit</button>
             </form>
@@ -42,7 +44,7 @@
                  <!--have a submit button that then gets picked up by eventlistener and the info gets added to an object array. preventdefault mulipage form in javascript-->
                 <!-- add a submit button that saves inputs and make sure it is disabled after clicked-->
                 <form>
-                    <button id="continue-btn" formaction="3animalform.html">Continue</button>
+                    <button id="continue-btn" formaction="3_animal.html">Continue</button>
                 </form>
             </div>
     
