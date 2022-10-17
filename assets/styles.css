@@ -3,7 +3,14 @@
     src: url(GoodUnicornRegular-Rxev.ttf);
 }
 
-h1, h2 {
+body {
+    background-image: url("pics/crystalball.png"), url("pics/purpleclouds.jpg");
+    background-color: rgb(173, 112, 173);
+    background-size: 750px, 1700px;
+    position: relative;
+}
+
+h1, h2, .form-label {
     font-family: goodUnicorn;
     color: black;
     text-align: center;
@@ -24,13 +31,6 @@ p {
     margin-right: 70px;
 }
 
-body {
-    background-image: url("pics/crystalball.png"), url("pics/purpleclouds.jpg");
-    background-color: rgb(173, 112, 173);
-    background-size: 750px, 1700px;
-    position: relative;
-}
-
 .container {
     display: flex;
     min-height: 90vh;
@@ -46,10 +46,6 @@ body {
     border-radius: 15px;
     box-shadow: 2px 2px 2px rgb(94, 49, 56);
 }
-
-/* span {
-    display: block;
-} */
 
 .homepage-images, .homepage-images-second-row {
     display: inline-block;

@@ -22,24 +22,25 @@
             <h2>Name 3 People</h2>
 
                 <!--Ask user to enter three people-->
-            <form>  
-                <div class="form-control">
+            <form id="myform" method="POST" action="list.js">  
+                <div>
                     <label class = "form-label" for = "people">1</label>
-                    <input class = "form-control mb-3" id = "people" type = "text" required minlength="2" maxlength="50"></input>
+                    <input class = "form-control mb-3" id = "people" name = "peopleName" type = "text" required minlength="2" maxlength="50" value=""/>
                 </div>
                 <br>
-                <div class="form-control">
+                <div>
                     <label class = "form-label" for = "people">2</label>
-                    <input class = "form-control mb-3" id = "people" type = "text" required minlength="2" maxlength="50"></input>
+                    <input class = "form-control mb-3" id = "people" name = "peopleName" type = "text" required minlength="2" maxlength="50" value=""/>
                 </div>
                 <br>
-                <div class="form-control">
+                <div>
                     <label class = "form-label" for = "people">3</label>
-                    <input class = "form-control mb-3" id = "people" type = "text" required minlength="2" maxlength="50"></input>
+                    <input class = "form-control mb-3" id = "people" name = "peopleName" type = "text" required minlength="2" maxlength="50" value=""/>
                 </div>
                 <br>
                 <button id="submit-btn" type="submit">Submit</button>
             </form>
+
             <div class="bottom-btns">
                 <form>
                     <button id="home-btn" formaction="index.html">Return To Home</button>
