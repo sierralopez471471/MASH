@@ -20,8 +20,8 @@ h2 {
 }
 
 p {
-    margin-left: 80px;
-    margin-right: 80px;
+    margin-left: 70px;
+    margin-right: 70px;
 }
 
 body {
@@ -46,6 +46,10 @@ body {
     border-radius: 15px;
     box-shadow: 2px 2px 2px rgb(94, 49, 56);
 }
+
+/* span {
+    display: block;
+} */
 
 .homepage-images, .homepage-images-second-row {
     display: inline-block;
