@@ -5,39 +5,48 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MASH</title>
         <link rel="stylesheet" href="assets\styles.css">
-        
-<!--Bootstrap cdn-->
-
     </head>
     <body>
         <!--LIST OF ANSWERS WITH ANIMATION-->
-        
-        <script src="assets\script.js"></script>
-        <script src="assets\list.js"></script>
-
-        <!--Put the game in a separate main div that sits on top of the background -->
         <main class="container">
 
             <h1>M.A.S.H.</h1>
-            
-            <div id="spouse"></div>
-            <div id="university"></div>
-            <div id="pet"></div>
-            <div id="vehicle"></div>
-            <div id="city"></div>
-            <div id="kids"></div>
-            <div id="grade-point-avg"></div>
-            <div id="occupation"></div>
 
+            <div class="mash-items">
+                <div id="spouse"></div>
+                <br>
+                <div id="university"></div>
+                <br>
+                <div id="pet"></div>
+                <br>
+                <div id="vehicle"></div>
+                <br>
+                <div id="city"></div>
+                <br>
+                <div id="kids"></div>
+                <br>
+                <div id="grade-point-avg"></div>
+                <br>
+                <div id="occupation"></div>
+                <br>
+                <div id="mash">
+                    <ul>
+                        <li>Mansion</li>
+                        <li>Apartment</li>
+                        <li>Swamp</li>
+                        <li>House</li>
+                    </ul>
+                </div>
+            </div>
 
-            <!--display object array here-->
             <div id="quill" ></div>
 
             <form>
                 <button id="continue-btn" formaction="results.html">Discover Your Future</button>
             </form>
+
         </main>
     </body>
+    <script src="assets\script.js"></script>
+    <script src="assets\list.js"></script>
 </html>
-            
-            

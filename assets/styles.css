@@ -44,7 +44,7 @@ p {
     height: 100%;
     border: 0.5px solid pink;
     border-radius: 15px;
-    box-shadow: 2px 2px 2px rgb(94, 49, 56);
+    box-shadow: 0px 0px 10px rgb(94, 49, 56);
 }
 
 .homepage-images, .homepage-images-second-row {
@@ -63,28 +63,17 @@ p {
     max-width: 80%;
     max-height: 25vh;
     border-radius: 5px 50px 5px 50px;
-    box-shadow: 2px 2px 2px 1px rgb(93, 86, 100);
+    box-shadow: 0px 0px 10px rgb(93, 86, 100);
 }
 
-#mansion {
-    max-width: 25%;
-    padding: 1em;
-}
-
-#apt {
+#mansion, #apt, #swamp, #house {
     max-width: 25%;
     padding: 1em;
 }
 
 #swamp {
-    max-width: 25%;
     position: relative;
     bottom: 40px;
-    padding: 1em;
-}
-
-#house {
-    max-width: 25%;
     padding: 1em;
 }
 
@@ -102,7 +91,7 @@ button {
 }
   
 button:hover {
-    background-color: #4CAF50;
+    background-color:blue;
     color: white;
 }
 
@@ -118,34 +107,40 @@ footer {
     padding: 5px;
 }
 
-#submit-btn {
+#submit-btn, #play-btn {
+    /* transition-duration: 0.4s;
+    border-radius: 12px;
+    font-family: goodUnicorn; */
     width: 15%;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: goodUnicorn;
     font-size: 20px;
     padding: 5px;
 }
 
-#play-btn {
-    width: 15%;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: goodUnicorn;
-    font-size: 20px;
-    padding: 5px;
+#submit-btn:hover, #play-btn:hover {
+    background-color: #4CAF50;
+    color: white;
 }
 
 #continue-btn {
     float: right;
     width: 25%;
-    font-family: goodUnicorn;
     font-size: 20px;
     padding: 5px;
 }
 
 #clear-btn {
     width: 50%;
+}
+
+.mash-items {
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    list-style: none;
+    position: relative;
+    right: 20px;
 }
 
 /* Make font sans-serif? I'd like it to be cute and soft */

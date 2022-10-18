@@ -6,38 +6,34 @@
         <title>MASH</title>
         <link rel="stylesheet" href="assets\styles.css">
         
-<!--Bootstrap cdn-->
-
     </head>
     <body>
         <!--PEOPLE-->
-        
-        
-        
-        <!--Put the game in a separate main div that sits on top of the background -->
         <main class="container">
+
             <h1>M.A.S.H.</h1>
             <h2 class="question-num">1 of 8</h2>
             <img id="banner" alt="people banner" src="assets\pics\new_alt_peeps.webp">
             <h2>Name 3 People</h2>
 
-                <!--Ask user to enter three people-->
-            <form id="myform" method="POST" action="list.js">  
+            <form id="myform">  
                 <div>
-                    <label class = "form-label" for = "people">1</label>
-                    <input class = "form-control mb-3" id = "people" name = "peopleName" type = "text" required minlength="2" maxlength="50" value=""/>
+                    <label class = "form-label" for = "people1">1</label>
+                    <input class = "form-control mb-3" id = "people" name = "people" type = "text" required minlength="2" maxlength="50">
                 </div>
                 <br>
                 <div>
                     <label class = "form-label" for = "people">2</label>
-                    <input class = "form-control mb-3" id = "people" name = "peopleName" type = "text" required minlength="2" maxlength="50" value=""/>
+                    <input class = "form-control mb-3" id = "people" name = "people" type = "text" required minlength="2" maxlength="50">
                 </div>
                 <br>
                 <div>
                     <label class = "form-label" for = "people">3</label>
-                    <input class = "form-control mb-3" id = "people" name = "peopleName" type = "text" required minlength="2" maxlength="50" value=""/>
+                    <input class = "form-control mb-3" id = "people" name = "people" type = "text" required minlength="2" maxlength="50">
                 </div>
                 <br>
+                <!-- add a submit button that saves inputs and make sure it is disabled after clicked-->
+                <!--have a submit button that then gets picked up by eventlistener and the info gets added to an object array. preventdefault mulipage form in javascript-->
                 <button id="submit-btn" type="submit">Submit</button>
             </form>
 
@@ -45,19 +41,17 @@
                 <form>
                     <button id="home-btn" formaction="index.html">Return To Home</button>
                 </form>
-                    <!-- add a submit button that saves inputs and make sure it is disabled after clicked-->
                 <form>
                     <button id="continue-btn" formaction="2_college.html">Continue</button>
                 </form>
             </div>
-            
-            <!-- add a submit button that saves inputs and make sure it is disabled after clicked-->
-            <!--have a submit button that then gets picked up by eventlistener and the info gets added to an object array. preventdefault mulipage form in javascript-->
 
         </main>
+
         <footer>
             <p>Image by rudzhan on Freepik</p>
         </footer>
-        <script src="assets\script.js"></script>
+
     </body>
+    <script src="assets\script.js"></script>
 </html>

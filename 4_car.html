@@ -5,50 +5,52 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MASH</title>
         <link rel="stylesheet" href="assets\styles.css">
-        
-<!--Bootstrap cdn-->
-
     </head>
     <body>
         <!--CARS-->
-        
-        <script src="assets\script.js"></script>
-
-        <!--Put the game in a separate main div that sits on top of the background -->
         <main class="container">
+
             <h1>M.A.S.H.</h1>
             <h2 class="question-num">4 of 8</h2>
             <img id="banner" alt="cars" src="assets\pics\cars.webp">
             <h2>Choose 3 Vehicles</h2>
 
-            <span>
-                <label class = "form-label" for = "car">1</label>
-                <input class = "form-control mb-3" id = "car" type = "text" required minlength="2" maxlength="50"></input>
-            </span>
-            <span>
-                <label class = "form-label" for = "car">2</label>
-                <input class = "form-control mb-3" id = "car" type = "text" required minlength="2" maxlength="50"></input>
-            </span>
-            <span>
-                <label class = "form-label" for = "car">3</label>
-                <input class = "form-control mb-3" id = "car" type = "text" required minlength="2" maxlength="50"></input>
-            </span>
-                
-            <button id="submit-btn" type="submit">Submit</button>
-            
+            <form id="myform">
+                <div>
+                    <label class = "form-label" for = "car">1</label>
+                    <input class = "form-control mb-3" id = "car" name = "car" type = "text" required minlength="2" maxlength="50">
+                </div>
+                <br>
+                <div>
+                    <label class = "form-label" for = "car">2</label>
+                    <input class = "form-control mb-3" id = "car" name = "car" type = "text" required minlength="2" maxlength="50">
+                </div>
+                <br>
+                <div>
+                    <label class = "form-label" for = "car">3</label>
+                    <input class = "form-control mb-3" id = "car"  name = "car" type = "text" required minlength="2" maxlength="50">
+                </div>
+                <br>
+                <!--have a submit button that then gets picked up by eventlistener and the info gets added to an object array. preventdefault mulipage form in javascript-->
+                <!-- add a submit button that saves inputs and make sure it is disabled after clicked-->
+                <button id="submit-btn" type="submit">Submit</button>
+             </form>
+
             <div class="bottom-btns">
                 <form>
                     <button id="home-btn" formaction="index.html">Return To Home</button>
                 </form>
-                <!--have a submit button that then gets picked up by eventlistener and the info gets added to an object array. preventdefault mulipage form in javascript-->
-                <!-- add a submit button that saves inputs and make sure it is disabled after clicked-->
                 <form>
                     <button id="continue-btn" formaction="5_city.html">Continue</button>
                 </form>
             </div>
+
         </main>
+
         <footer>
             <p>Image by vectorpocket on Freepik</p>
         </footer>
+
     </body>
+    <script src="assets\script.js"></script>
 </html>
