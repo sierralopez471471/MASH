@@ -2,22 +2,79 @@
 
 //Allow user to enter information in each form. Use event listeners
 
-
+const steps = Array.from(document.querySelectorAll('form .step'));
+const continueBtn = document.querySelectorAll('form .continue-btn');
 const form = document.getElementById('myform');
 
-form.addEventListener("submit", function(event) {
-    event.preventDefault();
-    new FormData(form);
+continueBtn.forEach(button => {
+    button.addEventListener('click', (e) => {
+        changeStep('continue');
+    });
 });
 
-form.addEventListener("formdata", event => {
-    const formDataObj = event.formData;
-    const entries = [...formDataObj.entries()];
-    
-    const values = [...formDataObj.values()];
-    console.log(values);
-    sessionStorage.setItem("key", values);
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const formData = [];
+    form.querySelectorAll('input').forEach(input => {
+        const {name, value} = JSON.stringify(input);
+        formData.push({name, value});
+    });
+    console.log(formData);
 });
+
+
+function changeStep(btn) {
+    let index = 0;
+    const active = document.querySelector('form .step.active');
+    index = steps.indexOf(active);
+    steps[index].classList.remove('active');
+    if(btn === 'continue') {
+        index ++;
+    } else if(btn !== 'continue') {
+    };
+    steps[index].classList.add('active');
+    console.log(index);
+};
+
+
+// const formData = [];
+
+// const addObj = (e) => {
+//     e.preventDefault();
+//     let data = {
+//         1: document.getElementById('people1').value,
+//         2: document.getElementById('people2').value,
+//         3: document.getElementById('people3').value
+//     };
+//     formData.push(data);
+//     console.log(formData);
+//     localStorage.setItem('MashList1', JSON.stringify(formData));
+// }
+// document.getElementById('submit-btn').addEventListener('click', addObj);
+// localStorage.clear();
+
+
+
+// const form = document.getElementById('myform');
+
+// form.addEventListener("submit", function(event) {
+//     event.preventDefault();
+//     new FormData(form);
+// });
+
+// form.addEventListener("formdata", event => {
+//     const formDataObj = event.formData;
+//     const entries = [...formDataObj.entries()];
+//     console.log(entries);
+//     const values = [...formDataObj.values()];
+//     console.log(values);
+//     sessionStorage.setItem("key", values);
+// });
+
+//const arr = sessionStorage.getItem("key") 
+//const obj = Object.fromEntries(arr);
+//     console.log(obj.values)
+
 
 
 // const form = document.getElementById('myform');
@@ -43,11 +100,10 @@ form.addEventListener("formdata", event => {
 //     const data = new FormData(event.target);
 //     const value = Object.fromEntries(data.entries());
 //     console.log({value});
+//     sessionStorage.setItem("key", {value});
 // }
 // const form = document.getElementById('myform');
 // form.addEventListener('submit', handleSubmit);
-
-
 
 
 // function myFunction() {
@@ -58,6 +114,8 @@ form.addEventListener("formdata", event => {
 //     }
 // }
 
+
+//document.write(key[i].value)
 
 //MINIGAME
 //Allow user to play a mini-game in which they catch hearts, cash, babies, and avoid bombs in an allotted time

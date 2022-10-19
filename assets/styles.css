@@ -51,6 +51,18 @@ p {
     display: inline-block;
 }
 
+.step {
+    display: none;
+}
+
+.step.active {
+    display: block;
+}
+
+#myform {
+    align-content: center;
+}
+
 .question-num {
     text-align: left;
     padding-left: 65px;
@@ -59,9 +71,9 @@ p {
 #banner {
     position: relative;
     bottom: 20px;
-    left: 65px;
+    /* left: 65px; */
     max-width: 80%;
-    max-height: 25vh;
+    max-height: 30vh;
     border-radius: 5px 50px 5px 50px;
     box-shadow: 0px 0px 10px rgb(93, 86, 100);
 }
@@ -107,25 +119,32 @@ footer {
     padding: 5px;
 }
 
-#submit-btn, #play-btn {
+.submit-btn, #play-btn {
     /* transition-duration: 0.4s;
     border-radius: 12px;
     font-family: goodUnicorn; */
+    
     width: 15%;
     font-size: 20px;
     padding: 5px;
 }
 
-#submit-btn:hover, #play-btn:hover {
+.submit-btn:hover, #play-btn:hover {
     background-color: #4CAF50;
     color: white;
 }
 
-#continue-btn {
-    float: right;
+.continue-btn {
     width: 25%;
     font-size: 20px;
     padding: 5px;
+}
+
+#continue-btn {
+    width: 25%;
+    float: right;
+    padding: 5px;
+    font-size: 20px;
 }
 
 #clear-btn {
