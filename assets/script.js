@@ -1,109 +1,82 @@
-//Add a button that says Play New Game that clears all the data for a new game
-
-//Allow user to enter information in each form. Use event listeners
-
 const steps = Array.from(document.querySelectorAll('form .step'));
 const continueBtn = document.querySelectorAll('form .continue-btn');
 const form = document.getElementById('myform');
+const formData = [];
+const allInputsArr = [];
 
+//every time a continue button is clicked, changeStep() will be invoked
 continueBtn.forEach(button => {
     button.addEventListener('click', (e) => {
-        changeStep('continue');
+        changeStep();
     });
 });
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const formData = [];
-    form.querySelectorAll('input').forEach(input => {
-        const {name, value} = JSON.stringify(input);
-        formData.push({name, value});
-    });
-    console.log(formData);
-});
-
-
-function changeStep(btn) {
+//changeStep() switches to the next form category by removing and adding the active class in the form divs
+//allows a change in aesthetics for user experience while staying in the same html file
+function changeStep() {
     let index = 0;
     const active = document.querySelector('form .step.active');
     index = steps.indexOf(active);
     steps[index].classList.remove('active');
-    if(btn === 'continue') {
-        index ++;
-    } else if(btn !== 'continue') {
-    };
+    index ++;
     steps[index].classList.add('active');
     console.log(index);
 };
 
+//all form input values are pushed into an array
+//then separated out into eight arrays (1 per category) of 3 values 
+//then pushed into another array
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    form.querySelectorAll('input').forEach(input => {
+        const value = input.value; //toggle JSON.stringify
+        allInputsArr.push(value);
+    });
+    console.log(allInputsArr);
+    localStorage.setItem('Mash', JSON.stringify(allInputsArr));
+    
+    for (let i = 0; i < allInputsArr.length ; i += 3) {
+        let cluster = [
+            allInputsArr[i],
+            allInputsArr[i+1],
+            allInputsArr[i+2]
+        ];
+        formData.push(cluster);
+        localStorage.setItem(`MashList${i}`, JSON.stringify(cluster));
+    }
+    console.log(formData);
+    //localStorage.setItem('MashList2', JSON.stringify(formData));
+});
 
-// const formData = [];
-
-// const addObj = (e) => {
-//     e.preventDefault();
-//     let data = {
-//         1: document.getElementById('people1').value,
-//         2: document.getElementById('people2').value,
-//         3: document.getElementById('people3').value
-//     };
-//     formData.push(data);
-//     console.log(formData);
-//     localStorage.setItem('MashList1', JSON.stringify(formData));
-// }
-// document.getElementById('submit-btn').addEventListener('click', addObj);
-// localStorage.clear();
+//for (let i = 0; i < formData.length; i++) {
+//console.log(formData[i]);
+//}
 
 
+//localStorage.setItem('spouse-div', formData[0]);
 
-// const form = document.getElementById('myform');
-
-// form.addEventListener("submit", function(event) {
-//     event.preventDefault();
-//     new FormData(form);
-// });
-
-// form.addEventListener("formdata", event => {
-//     const formDataObj = event.formData;
-//     const entries = [...formDataObj.entries()];
-//     console.log(entries);
-//     const values = [...formDataObj.values()];
-//     console.log(values);
-//     sessionStorage.setItem("key", values);
-// });
-
-//const arr = sessionStorage.getItem("key") 
-//const obj = Object.fromEntries(arr);
-//     console.log(obj.values)
+//localStorage.clear();
 
 
 
-// const form = document.getElementById('myform');
 
-// form.addEventListener('submit', (e) => {
-//     e.preventDefault();
-//     const formDataObj = [];
-//     form.querySelectorAll('input').forEach(input => {
-//         const{value} = JSON.stringify(input);
-//         formDataObj.push({value});
-//     })
-//     console.log(formDataObj);
-// })
+
+//     const obj = Object.fromEntries(formData);
+// //     for (let i = 0; i < formData.length; i ++) {
+// //         const obj = Object.fromEntries(formData[i]);
+// //         console.log(obj);
+// //     }
+//     console.log(obj);
+
+
+//take each array and put it inside of mash-items divs
+
+
 
 
 //!!
 // const values = JSON.stringify(Object.fromEntries([...formDataObj.values()]));
 //!!
-
-
-// function handleSubmit(event) {
-//     event.preventDefault();
-//     const data = new FormData(event.target);
-//     const value = Object.fromEntries(data.entries());
-//     console.log({value});
-//     sessionStorage.setItem("key", {value});
-// }
-// const form = document.getElementById('myform');
-// form.addEventListener('submit', handleSubmit);
 
 
 // function myFunction() {

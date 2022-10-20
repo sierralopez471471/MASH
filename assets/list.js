@@ -1,21 +1,35 @@
-// var mash = {
-//     1 : document.getElementById('spouse').innerHTML = localStorage.getItem('MashList1'),
-//     2 : document.getElementById('university').innerHTML = localStorage.getItem('MashList2')
-// }
+let spouse = document.getElementById('spouse')
+let innerSpouse = localStorage.getItem('MashList0');
+spouse.innerHTML = innerSpouse;
 
-// university.innerHTML = localStorage.getItem("MashList");
-// let pet = document.getElementById("pet")
-// pet.innerHTML = localStorage.getItem("MashList");
-// let vehicle = document.getElementById("vehicle")
-// vehicle.innerHTML = localStorage.getItem("MashList");
-// let city = document.getElementById("city")
-// city.innerHTML = localStorage.getItem("MashList");
-// let kids = document.getElementById("kids")
-// kids.innerHTML = localStorage.getItem("MashList");
-// let gradePointAvg = document.getElementById("grade-point-avg")
-// gpa.innerHTML = localStorage.getItem("MashList");
-// let occupation = document.getElementById("occupation")
-// occupation.innerHTML = localStorage.getItem("MashList");
+let university = document.getElementById("university");
+let innerUniversity = localStorage.getItem("MashList3");
+university.innerHTML = innerUniversity;
+
+let pet = document.getElementById("pet");
+let innerPet = localStorage.getItem("MashList6");
+pet.innerHTML = innerPet;
+
+let vehicle = document.getElementById("vehicle");
+let innerVehicle = localStorage.getItem("MashList9");
+vehicle.innerHTML = innerVehicle;
+
+let city = document.getElementById("city");
+let innerCity = localStorage.getItem("MashList12");
+city.innerHTML = innerCity;
+
+let kids = document.getElementById("kids");
+let innerKids = localStorage.getItem("MashList15");
+kids.innerHTML = innerKids;
+
+let gpa = document.getElementById("grade-point-avg");
+let innerGPA = localStorage.getItem("MashList18");
+gpa.innerHTML = innerGPA;
+
+let job = document.getElementById("occupation");
+let innerJob = localStorage.getItem("MashList21");
+job.innerHTML = innerJob;
+
 
 
 // function makeUl(array) {
@@ -29,4 +43,3 @@
 //     // console.log(list);
 // }
 // document.getElementById('spouse').appendChild(makeUl(mash(0));
-//localStorage.clear();

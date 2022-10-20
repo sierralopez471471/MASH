@@ -14,16 +14,15 @@ h1, h2, .form-label {
     font-family: goodUnicorn;
     color: black;
     text-align: center;
+    margin: 0;
 }
 
 h1 {
     font-size: 100px;
-    margin: 0;
 }
 
 h2 {
     font-size: 30px;
-    margin: 0;
 }
 
 p {
@@ -33,7 +32,7 @@ p {
 
 .container {
     display: flex;
-    min-height: 90vh;
+    min-height: 93vh;
     flex-direction: column;
     text-align: center;
     justify-content: space-between;
@@ -51,6 +50,7 @@ p {
     display: inline-block;
 }
 
+/* for changeStep() */
 .step {
     display: none;
 }
@@ -59,19 +59,22 @@ p {
     display: block;
 }
 
-#myform {
-    align-content: center;
-}
-
 .question-num {
     text-align: left;
     padding-left: 65px;
 }
 
+input { 
+    width: 300px;
+}
+
+footer {
+    text-align: center;
+}
+
 #banner {
     position: relative;
     bottom: 20px;
-    /* left: 65px; */
     max-width: 80%;
     max-height: 30vh;
     border-radius: 5px 50px 5px 50px;
@@ -89,17 +92,29 @@ p {
     padding: 1em;
 }
 
-input { 
-    width: 300px;
+#mash {
+    text-align: left;
 }
 
+.mash-items {
+    font-family: sans-serif;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    list-style: none;
+}
+
+/* buttons */
 button {
     transition-duration: 0.4s;
-    width: 50%;
-    padding: 12px 28px;
+    width: 25%;
+    padding: 5px;
     border-radius: 12px;
     font-family: goodUnicorn;
-    font-size: 25px;
+    font-size: 20px;
 }
   
 button:hover {
@@ -107,60 +122,35 @@ button:hover {
     color: white;
 }
 
-footer {
-    text-align: center;
+.start-mash {
+    padding: 12px 28px;
+    font-size: 25px;
+    width: 50%;
 }
 
-#home-btn {
-    float: left;
-    width: 25%;
-    font-family: goodUnicorn;
-    font-size: 20px;
-    padding: 5px;
-}
-
-.submit-btn, #play-btn {
-    /* transition-duration: 0.4s;
-    border-radius: 12px;
-    font-family: goodUnicorn; */
-    
+.submit-btn, .play-btn {
     width: 15%;
-    font-size: 20px;
-    padding: 5px;
 }
 
-.submit-btn:hover, #play-btn:hover {
+.submit-btn:hover, .play-btn:hover {
     background-color: #4CAF50;
     color: white;
 }
 
-.continue-btn {
-    width: 25%;
-    font-size: 20px;
-    padding: 5px;
+.home-btn {
+    float: left;
 }
 
-#continue-btn {
-    width: 25%;
+.fortune-btn, .game-btn {
     float: right;
-    padding: 5px;
-    font-size: 20px;
 }
 
-#clear-btn {
-    width: 50%;
-}
-
-.mash-items {
-    display: flex;
-    flex-direction: column;
-}
-
-ul {
-    list-style: none;
+.game-btn {
     position: relative;
-    right: 20px;
+    top: 52px;
 }
+
+/* disable game-btn until submit-btn is clicked */
 
 /* Make font sans-serif? I'd like it to be cute and soft */
 
