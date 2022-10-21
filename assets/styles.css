@@ -30,6 +30,31 @@ p {
     margin-right: 70px;
 }
 
+#fortune {
+    margin-left: 70px;
+    margin-right: 70px;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.game-instructions {
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+#green {
+    color: rgb(22, 142, 22);
+}
+
+#red{
+    color: rgb(141, 34, 34);
+}
+
+span {
+    color: rgb(137, 0, 0);
+}
+
 .container {
     display: flex;
     min-height: 93vh;
@@ -46,9 +71,6 @@ p {
     box-shadow: 0px 0px 10px rgb(94, 49, 56);
 }
 
-.homepage-images, .homepage-images-second-row {
-    display: inline-block;
-}
 
 /* for changeStep() */
 .step {
@@ -68,8 +90,10 @@ input {
     width: 300px;
 }
 
-footer {
-    text-align: center;
+
+/* images */
+.homepage-images, .homepage-images-second-row {
+    display: inline-block;
 }
 
 #banner {
@@ -92,19 +116,52 @@ footer {
     padding: 1em;
 }
 
-#mash {
-    text-align: left;
+#quill {
+    position: relative;
+    z-index: 1;
+    width: 15%;
+    height: 10%;
+    padding: 0;
+    margin: 0;
 }
 
+footer {
+    text-align: center;
+}
+
+
+/* list.html */
 .mash-items {
-    font-family: sans-serif;
-    font-size: 20px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.column1 {
     display: flex;
     flex-direction: column;
+    text-align: left;
+    margin: auto;
 }
 
-ul {
-    list-style: none;
+.column2 {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: auto;
+}
+
+.column3 {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: auto;
+}
+
+.strike {
+    text-decoration: line-through;
 }
 
 /* buttons */
