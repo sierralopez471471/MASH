@@ -30,7 +30,7 @@ function changeStep() {
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     form.querySelectorAll('input').forEach(input => {
-        const value = input.value; //toggle JSON.stringify
+        const value = input.value;
         allInputsArr.push(value);
     });
 
@@ -38,7 +38,7 @@ form.addEventListener('submit', (e) => {
 
     //storing inputs to put inside list.js
     localStorage.setItem('Mash', JSON.stringify(allInputsArr));
-    
+               
     for (let i = 0; i < allInputsArr.length ; i += 3) {
         let cluster = [
             allInputsArr[i],
@@ -58,17 +58,6 @@ form.addEventListener('submit', (e) => {
 
 //localStorage.clear();
 
-
-
-
-
-//     const obj = Object.fromEntries(formData);
-// //     for (let i = 0; i < formData.length; i ++) {
-// //         const obj = Object.fromEntries(formData[i]);
-// //         console.log(obj);
-// //     }
-//     console.log(obj);
-
 // function myFunction() {
 //     let fortune = [];
 
@@ -77,8 +66,6 @@ form.addEventListener('submit', (e) => {
 //     }
 // }
 
-
-//document.write(key[i].value)
 
 //MINIGAME
 //Allow user to play a mini-game in which they catch hearts, cash, babies, and avoid bombs in an allotted time

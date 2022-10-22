@@ -57,9 +57,9 @@ for (let i = 0; i < categories.length; i++) {
 console.log(nodeDataArr);
 
 nodeDataArr = nodeDataArr.filter(function(_, i) {
-    return (i + 1) % 7; 
-}); 
-//will eventually replace 7 with `${score}`
+    return (i + 1) % 7; //will eventually replace 7 with `${score}`
+});
+
 // let spouseArr = nodeDataArr.find((spouse.childNodes) => {
 //     return spouse.childNodes.id == "spouse";
 // });
@@ -68,10 +68,7 @@ nodeDataArr = nodeDataArr.filter(function(_, i) {
 //     let peopleWinner = spouseArr[0];
 // };
 
-
 console.log(nodeDataArr);
-
-
 
 
 //k = 3
@@ -98,14 +95,6 @@ function checkMatch(index, value){
 //if ('nodeDataArr[3]' == spouse.childNodes ){
 //nodeDataArr[3].classList.add('strike')
 //};
-
-// let k = 6;
-// while (k = 6) { //replace with `${score}`
-//     if (catNodes.data == nodeDataArr[k - 1]){ 
-//         (catNodes.data.strike())
-//     }
-//    console.log(nodeDataArr[k - 1]);
-// }
 
 
 
