@@ -1,15 +1,15 @@
 //displays fortune with matching image
 
-if (mash-winner == 'Mansion') {
-    document.querySelector('#mash-image').src = 'assets/pics/mansion.png'
+if (mashWinner == 'Mansion') {
+    document.querySelector('#mash-winner-image').src = 'assets/pics/mansion.png'
 }
-else if (mash-winner == 'Apartment') {
+else if (mashWinner == 'Apartment') {
     document.querySelector('#mash-winner-image').src = 'assets/pics/apartment.png'
 }
-else if (mash-winner == 'Swamp') {
+else if (mashWinner == 'Swamp') {
     document.querySelector('#mash-winner-image').src = 'assets/pics/shreks_swamp.png'
 }
-else if (mash-winner == 'House') {
+else if (mashWinner == 'House') {
     document.querySelector('#mash-winner-image').src = 'assets/pics/house.png'
 }
 

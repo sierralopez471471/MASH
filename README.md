@@ -12,8 +12,4 @@
 
 ### How To Play The Good Fortune Minigame
 
-#### You have 15 seconds to play.
-#### Move your character with the left and right arrow keys. 
-#### Catch hearts, cash, and babies for 1 point each.
-#### Avoid the bombs worth -2 points each!
-#### You must score at least 3 points for your fortune to be read.
+#### You have 15 seconds to play.<br>Move your character with the left and right arrow keys. <br>Catch hearts, cash, and babies for 1 point each.<br>Avoid the bombs worth -2 points each!<br>You must score at least 3 points for your fortune to be read.

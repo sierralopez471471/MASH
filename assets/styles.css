@@ -161,7 +161,10 @@ footer {
 }
 
 .strike {
+    transition-duration: 0.5s;
     text-decoration: line-through;
+    background-color: rgb(252, 216, 216);
+    list-style: none;
 }
 
 /* buttons */
@@ -208,8 +211,6 @@ button:hover {
 }
 
 /* disable game-btn until submit-btn is clicked */
-
-/* Make font sans-serif? I'd like it to be cute and soft */
 
 /* center minigame div */
 

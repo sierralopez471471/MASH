@@ -30,14 +30,12 @@ function changeStep() {
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     form.querySelectorAll('input').forEach(input => {
-        const value = input.value;
+        const value = (input.value);
         allInputsArr.push(value);
     });
 
     console.log(allInputsArr); //REMOVE!
 
-    //storing inputs to put inside list.js
-    localStorage.setItem('Mash', JSON.stringify(allInputsArr));
                
     for (let i = 0; i < allInputsArr.length ; i += 3) {
         let cluster = [
@@ -55,16 +53,6 @@ form.addEventListener('submit', (e) => {
     console.log(formData); //REMOVE!
 
 });
-
-//localStorage.clear();
-
-// function myFunction() {
-//     let fortune = [];
-
-//     for (var i = 0; i < fortune.length; i ++) {
-//         document.getElementById(fortune[i].id).addEventListener('onclick')
-//     }
-// }
 
 
 //MINIGAME
