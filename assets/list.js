@@ -33,7 +33,7 @@ let innerJob = JSON.parse(localStorage.getItem("MashList21")).join('<br/>');
 job.innerHTML = innerJob;
 
 //always in mash list
-const mash = [
+var mashArr = [
     "Mansion",
     "Apartment",
     "Swamp",
@@ -42,7 +42,6 @@ const mash = [
 
 //making arrays for each category
 const categories = Array.from(document.querySelectorAll('.category'));
-var nodeDataArr = [];
 var spouseArr = [];
 var universityArr = [];
 var petArr = [];
@@ -52,13 +51,9 @@ var kidsArr = [];
 var gpaArr = [];
 var jobArr = [];
 
-console.log(categories); //REMOVE!
-
 for (let i = 0; i < categories.length; i++) {
     catNodes = categories[i].childNodes;
     for (let j = 0; j < catNodes.length; j += 2) {
-        nodeDataArr.push(catNodes[j].data);
-        // console.log(catNodes[j].parentNode.id);
         if (catNodes[j].parentNode.id == 'spouse'){
             spouseArr.push(catNodes[j].data)
         }
@@ -115,88 +110,207 @@ document.getElementById('grade-point-avg').appendChild(makeUL(gpaArr));
 job.innerHTML = '';
 document.getElementById('occupation').appendChild(makeUL(jobArr));
 
-document.getElementById('mash').appendChild(makeUL(mash));
+document.getElementById('mash').appendChild(makeUL(mashArr));
 
 //adding strike class to answers of specific index in list
 const liArr = Array.from(document.querySelectorAll('li'));
 
-let count = 0;
-let start = 4;
-
-function cycleArray() {
-    let index = (start + count) % liArr.length;
-    liArr[index-1].classList.add('strike');
-    console.log(liArr[index-1]);
+//since I don't have the minigame yet, I hardcoded the scores into the Array.readItem indexes
+Array.prototype.readItem = function(index) {
+    let winner = this[index % this.length];
     
-
-    count+=start;
+    return winner;
 }
-cycleArray();
-cycleArray();
-cycleArray();
-cycleArray();
-cycleArray();
-cycleArray();
-cycleArray();
-//setInterval(cycleArray, 2000);
 
-// for (let k = 7; k <= liArr.length; k+=7) {
-//     liArr[k-1].classList.add('strike');
-//     // liArr[7+7].classList.add('strike');
-//     // liArr[7+7+7].classList.add('strike');
-//     console.log(k);
-//     strike = document.querySelector('.category .li .strike');
-//     liArr.push(liArr.splice(liArr.indexOf(strike), 1)[0]);
-// }
+let count = 0;
+let itemsToGoThrough = 3;
 
+function cycleSpouseArray() {
+    let start = 0;
+    let index = (start + count) % liArr.length;
+    let peopleWinner = spouseArr.readItem(5); //will replace with `${score}` 
+    localStorage.setItem('peopleWinner', peopleWinner)
 
-console.log(liArr)
+    if (liArr[index].innerText !== peopleWinner) {
+        liArr[index].classList.add('strike');
+    }
+    if (liArr[index].innerText == peopleWinner) {
+        liArr[index].classList.add('winner');
+    }
+    count++
 
+    if (count == itemsToGoThrough){
+        count = 0;
+    }
+}
 
+function cycleUniversityArray(){
+    let start = 3;
+    let index = (start + count) % liArr.length;
+    let collegeWinner = universityArr.readItem(4); //will replace with `${score}` 
+    localStorage.setItem('collegeWinner', collegeWinner)
 
-// function getRandomArbitrary(min, max) {
-//     return Math.floor(Math.random()*(max-min)+min);
-// }
+    if (liArr[index].innerText !== collegeWinner) {
+        liArr[index].classList.add('strike');
+    }
+    if (liArr[index].innerText == collegeWinner) {
+        liArr[index].classList.add('winner');
+    }
+    count++
 
-// nodeDataArr = nodeDataArr.filter(function(_, i) {
-//      return (i + 1) % (getRandomArbitrary(3, 14)); //will eventually replace 7 with `${score}`
-// });
-// console.log(nodeDataArr);
+    if (count == itemsToGoThrough){
+        count = 0;
+    }
+}
 
+function cyclePetArray(){
+    let start = 6;
+    let index = (start + count) % liArr.length;
+    let animalWinner = petArr.readItem(8); //will replace with `${score}` 
+    localStorage.setItem('animalWinner', animalWinner)
 
-// var k = nodeDataArr.length;
-// while (k--) {
-//     dataArr = nodeDataArr[k];
-//     nodeDataArr[k] --;
-//     if (dataArr < k) {
-//         nodeDataArr.splice(k, 1);
-//     }
-// }
+    if (liArr[index].innerText !== animalWinner) {
+        liArr[index].classList.add('strike');
+    }
+    if (liArr[index].innerText == animalWinner) {
+        liArr[index].classList.add('winner');
+    }
+    count++
 
+    if (count == itemsToGoThrough){
+        count = 0;
+    }
+}
 
-//use .filter() to select every 7th element in nodeDataArr
-//if parentElement.id=univerisity
-//use .forEach() with function checkMatch() to match html elements with the filtered elements
-//define checkMatch funtion...if html elem == filtered elem, then =>
-//use .classList.add('strike') to strike those html elements
-//use .map() to transform nodeDataArr to not include selected elements
-//use .find() to make remaining element in each category have a class of "'category'-winner"
+function cycleVehicleArray(){
+    let start = 9;
+    let index = (start + count) % liArr.length;
+    let carWinner = vehicleArr.readItem(13); //will replace with `${score}` 
+    localStorage.setItem('carWinner', carWinner)
 
-//if ('nodeDataArr[i]' == spouse.childNodes ){
-//nodeDataArr[i].classList.add('strike')
-//};
+    if (liArr[index].innerText !== carWinner) {
+        liArr[index].classList.add('strike');
+    }
+    if (liArr[index].innerText == carWinner) {
+        liArr[index].classList.add('winner');
+    }
+    count++
 
+    if (count == itemsToGoThrough){
+        count = 0;
+    }
+}
 
-//categories => index[i].childNodes => index[0,2,4] to count and => index[0,2,4].data or .nodeValue or .textContent to display inside ${}
+function cycleCityArray(){
+    let start = 12;
+    let index = (start + count) % liArr.length;
+    let cityWinner = cityArr.readItem(26); //will replace with `${score}` 
+    localStorage.setItem('cityWinner', cityWinner)
 
+    if (liArr[index].innerText !== cityWinner) {
+        liArr[index].classList.add('strike');
+    }
+    if (liArr[index].innerText == cityWinner) {
+        liArr[index].classList.add('winner');
+    }
+    count++
 
-//LIST
-//let fortune = array of all values
-//for(var i=0; fortune[i].length; i++){
-    //if (fortune[i] != crossed out) {
-        //count it
-    //}
-    //else if (fortune[i] == crossed out) {
-        //dont count it
-    //}
-//}
+    if (count == itemsToGoThrough){
+        count = 0;
+    }
+}
+
+function cycleKidsArray(){
+    let start = 15;
+    let index = (start + count) % liArr.length;
+    let numberWinner = kidsArr.readItem(34); //will replace with `${score}` 
+    localStorage.setItem('numberWinner', numberWinner)
+
+    if (liArr[index].innerText !== numberWinner) {
+        liArr[index].classList.add('strike');
+    }
+    if (liArr[index].innerText == numberWinner) {
+        liArr[index].classList.add('winner');
+    }
+    count++
+
+    if (count == itemsToGoThrough){
+        count = 0;
+    }
+}
+
+function cycleGpaArray(){
+    let start = 18;
+    let index = (start + count) % liArr.length;
+    let gpaWinner = gpaArr.readItem(14); //will replace with `${score}` 
+    localStorage.setItem('gpaWinner', gpaWinner)
+
+    if (liArr[index].innerText !== gpaWinner) {
+        liArr[index].classList.add('strike');
+    }
+    if (liArr[index].innerText == gpaWinner) {
+        liArr[index].classList.add('winner');
+    }
+    count++
+
+    if (count == itemsToGoThrough){
+        count = 0;
+    }
+}
+
+function cycleJobArray(){
+    let start = 21;
+    let index = (start + count) % liArr.length;
+    let jobWinner = jobArr.readItem(15); //will replace with `${score}` 
+    localStorage.setItem('jobWinner', jobWinner)
+
+    if (liArr[index].innerText !== jobWinner) {
+        liArr[index].classList.add('strike');
+    }
+    if (liArr[index].innerText == jobWinner) {
+        liArr[index].classList.add('winner');
+    }
+    count++
+
+    if (count == itemsToGoThrough){
+        count = 0;
+    }
+}
+
+function cycleMashArray(){
+    let start = 24;
+    let index = (start + count) % liArr.length;
+    let mashWinner = mashArr.readItem(10); //will replace with `${score}` 
+    localStorage.setItem('mashWinner', mashWinner)
+
+    if (liArr[index].innerText !== mashWinner) {
+        liArr[index].classList.add('strike');
+    }
+    if (liArr[index].innerText == mashWinner) {
+        liArr[index].classList.add('winner');
+    }
+    count++
+
+    if (count == (itemsToGoThrough+1)){
+        count = 0;
+    }
+}
+
+async function cycleTurns() {
+    const peopleWinner = await setInterval(cycleSpouseArray, 500);
+    const collegeWinner = await setInterval(cycleUniversityArray, 500);
+    const animalWinner = await setInterval(cyclePetArray, 500);
+    const carWinner = await setInterval(cycleVehicleArray, 500);
+    const cityWinner = await setInterval(cycleCityArray, 500);
+    const numberWinner = await setInterval(cycleKidsArray, 500);
+    const gpaWinner = await setInterval(cycleGpaArray, 500);
+    const jobWinner = await setInterval(cycleJobArray, 500);
+}
+
+cycleTurns();
+//for some reason when I add cycleMashArray into cycleTurns, every single selection gets crossed out regardless of true/false equality
+//so I had to take cycleMashArray out and call it separately four times
+cycleMashArray();
+cycleMashArray();
+cycleMashArray();
+cycleMashArray();

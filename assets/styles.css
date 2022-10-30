@@ -116,6 +116,16 @@ input {
     padding: 1em;
 }
 
+.img-container {
+    display: block;
+    text-align: center;
+}
+
+#mash-winner-img {
+    max-width: 50%;
+    padding: 1em;
+}
+
 #quill {
     position: relative;
     z-index: 1;
@@ -126,6 +136,7 @@ input {
 }
 
 footer {
+    font-size: 10px;
     text-align: center;
 }
 
@@ -163,8 +174,11 @@ footer {
 .strike {
     transition-duration: 0.5s;
     text-decoration: line-through;
-    background-color: rgb(252, 216, 216);
     list-style: none;
+}
+
+.winner {
+    background-color: rgb(252, 216, 216);
 }
 
 /* buttons */
@@ -210,10 +224,9 @@ button:hover {
     top: 52px;
 }
 
+
+/* To-Dos! */
 /* disable game-btn until submit-btn is clicked */
-
 /* center minigame div */
-
-/* Add animation of pencil skip over answers and crossing them out */
-
-/* put a line through the answers that get "crossed out" by the pencil */
+/* Add animation of quill skipping over answers and crossing them out */
+/* disable fortune-btn until animation is finished */

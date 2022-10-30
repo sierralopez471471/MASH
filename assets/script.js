@@ -20,9 +20,6 @@ function changeStep() {
     steps[index].classList.remove('active');
     index ++;
     steps[index].classList.add('active');
-
-    console.log(index); //REMOVE!
-
 };
 
 //all form input values are pushed into an array
@@ -34,8 +31,6 @@ form.addEventListener('submit', (e) => {
         allInputsArr.push(value);
     });
 
-    console.log(allInputsArr); //REMOVE!
-
                
     for (let i = 0; i < allInputsArr.length ; i += 3) {
         let cluster = [
@@ -44,23 +39,13 @@ form.addEventListener('submit', (e) => {
             allInputsArr[i+2]
         ];
 
-        formData.push(cluster); //REMOVE!
-
         //storing inputs to put inside list.js
         localStorage.setItem(`MashList${i}`, JSON.stringify(cluster));
     }
-
-    console.log(formData); //REMOVE!
-
 });
 
 
-//MINIGAME
+//MINIGAME: TO-DO!
 //Allow user to play a mini-game in which they catch hearts, cash, babies, and avoid bombs in an allotted time
 //Hearts, cash, and babies earn player 1 point each but bombs earn -2 points
-//Keep score, and when time runs out display that number to them
-
-
-//That number will be used to count how many answers to skip over before crossing them out and eliminating them from the fortune
-//Stop the elimination of answers in each div after there is only one answer left
-//Once there is only one answer left in each div, stop elimination all together and display fortune
+//Keep score, and when time runs out display score
