@@ -134,7 +134,7 @@ function cycleSpouseArray() {
     if (liArr[index].innerText !== peopleWinner) {
         liArr[index].classList.add('strike');
     }
-    if (liArr[index].innerText == peopleWinner) {
+    else if (liArr[index].innerText == peopleWinner) {
         liArr[index].classList.add('winner');
     }
     count++
@@ -153,7 +153,7 @@ function cycleUniversityArray(){
     if (liArr[index].innerText !== collegeWinner) {
         liArr[index].classList.add('strike');
     }
-    if (liArr[index].innerText == collegeWinner) {
+    else if (liArr[index].innerText == collegeWinner) {
         liArr[index].classList.add('winner');
     }
     count++
@@ -172,7 +172,7 @@ function cyclePetArray(){
     if (liArr[index].innerText !== animalWinner) {
         liArr[index].classList.add('strike');
     }
-    if (liArr[index].innerText == animalWinner) {
+    else if (liArr[index].innerText == animalWinner) {
         liArr[index].classList.add('winner');
     }
     count++
@@ -191,7 +191,7 @@ function cycleVehicleArray(){
     if (liArr[index].innerText !== carWinner) {
         liArr[index].classList.add('strike');
     }
-    if (liArr[index].innerText == carWinner) {
+    else if (liArr[index].innerText == carWinner) {
         liArr[index].classList.add('winner');
     }
     count++
@@ -210,7 +210,7 @@ function cycleCityArray(){
     if (liArr[index].innerText !== cityWinner) {
         liArr[index].classList.add('strike');
     }
-    if (liArr[index].innerText == cityWinner) {
+    else if (liArr[index].innerText == cityWinner) {
         liArr[index].classList.add('winner');
     }
     count++
@@ -229,7 +229,7 @@ function cycleKidsArray(){
     if (liArr[index].innerText !== numberWinner) {
         liArr[index].classList.add('strike');
     }
-    if (liArr[index].innerText == numberWinner) {
+    else if (liArr[index].innerText == numberWinner) {
         liArr[index].classList.add('winner');
     }
     count++
@@ -248,7 +248,7 @@ function cycleGpaArray(){
     if (liArr[index].innerText !== gpaWinner) {
         liArr[index].classList.add('strike');
     }
-    if (liArr[index].innerText == gpaWinner) {
+    else if (liArr[index].innerText == gpaWinner) {
         liArr[index].classList.add('winner');
     }
     count++
@@ -267,7 +267,7 @@ function cycleJobArray(){
     if (liArr[index].innerText !== jobWinner) {
         liArr[index].classList.add('strike');
     }
-    if (liArr[index].innerText == jobWinner) {
+    else if (liArr[index].innerText == jobWinner) {
         liArr[index].classList.add('winner');
     }
     count++
@@ -286,7 +286,7 @@ function cycleMashArray(){
     if (liArr[index].innerText !== mashWinner) {
         liArr[index].classList.add('strike');
     }
-    if (liArr[index].innerText == mashWinner) {
+    else if (liArr[index].innerText == mashWinner) {
         liArr[index].classList.add('winner');
     }
     count++
@@ -297,14 +297,14 @@ function cycleMashArray(){
 }
 
 async function cycleTurns() {
-    const peopleWinner = await setInterval(cycleSpouseArray, 500);
-    const collegeWinner = await setInterval(cycleUniversityArray, 500);
-    const animalWinner = await setInterval(cyclePetArray, 500);
-    const carWinner = await setInterval(cycleVehicleArray, 500);
-    const cityWinner = await setInterval(cycleCityArray, 500);
-    const numberWinner = await setInterval(cycleKidsArray, 500);
-    const gpaWinner = await setInterval(cycleGpaArray, 500);
-    const jobWinner = await setInterval(cycleJobArray, 500);
+    const peopleWinner = await setInterval(cycleSpouseArray, 1500);
+    const collegeWinner = await setInterval(cycleUniversityArray, 1500);
+    const animalWinner = await setInterval(cyclePetArray, 1500);
+    const carWinner = await setInterval(cycleVehicleArray, 1500);
+    const cityWinner = await setInterval(cycleCityArray, 1500);
+    const numberWinner = await setInterval(cycleKidsArray, 1500);
+    const gpaWinner = await setInterval(cycleGpaArray, 1500);
+    const jobWinner = await setInterval(cycleJobArray, 1500);
 }
 
 cycleTurns();

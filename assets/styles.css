@@ -33,6 +33,7 @@ p {
 #fortune {
     margin-left: 70px;
     margin-right: 70px;
+    margin-bottom: 8px;
     font-family: sans-serif;
     font-size: 20px;
     font-weight: bold;
@@ -172,7 +173,7 @@ footer {
 }
 
 .strike {
-    transition-duration: 0.5s;
+    transition-duration: 2s;
     text-decoration: line-through;
     list-style: none;
 }
@@ -194,6 +195,12 @@ button {
 button:hover {
     background-color:blue;
     color: white;
+}
+
+.disabled {
+    color: black;
+    background-color: grey;
+    cursor: not-allowed;
 }
 
 .start-mash {
@@ -226,8 +233,6 @@ button:hover {
 
 
 /* To-Dos! */
-/* disable game-btn until submit-btn is clicked */
-/* disable submit-btn after it is clicked */
 /* center minigame div */
 /* Add animation of quill skipping over answers and crossing them out */
 /* disable fortune-btn until animation is finished */

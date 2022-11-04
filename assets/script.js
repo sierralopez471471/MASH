@@ -24,13 +24,21 @@ function changeStep() {
 
 //all form input values are pushed into an array
 //then separated out into eight arrays (1 per category) of 3 values 
+document.querySelector('.game-btn').disabled = true;
+
 form.addEventListener('submit', (e) => {
     e.preventDefault();
+
+    document.querySelector('.submit-btn').disabled = true;
+    document.querySelector('.submit-btn').classList.add('disabled');
+
+    document.querySelector('.game-btn').disabled = false;
+    document.querySelector('.game-btn').classList.remove('disabled');
+
     form.querySelectorAll('input').forEach(input => {
         const value = (input.value);
         allInputsArr.push(value);
     });
-
                
     for (let i = 0; i < allInputsArr.length ; i += 3) {
         let cluster = [
