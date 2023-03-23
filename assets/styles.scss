@@ -1,0 +1,224 @@
+// 10-15 SCSS variables
+// 10-15 nested selectors, with at least 2 uses of the SCSS ampersand (&)
+// 3-5 SCSS mixins
+// 2-4 SCSS functions
+// 2-4 instances of SCSS flow control directives or operators
+// 3-5 SCSS partial files, imported
+// One of the SCSS error-handling directives 
+
+@font-face {
+    font-family: "goodUnicorn";
+    src: url(GoodUnicornRegular-Rxev.ttf);
+}
+
+body {
+    background-image: url("pics/crystalball.png"), url("pics/purpleclouds.jpg");
+    background-color: rgb(173, 112, 173);
+    background-size: 750px, 1700px;
+    position: relative;
+}
+
+h1, h2, .form-label {
+    font-family: goodUnicorn;
+    color: black;
+    text-align: center;
+    margin: 0;
+}
+
+h1 {
+    font-size: 100px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+p {
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+#fortune {
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-bottom: 8px;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.game-instructions {
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+#green {
+    color: rgb(22, 142, 22);
+}
+
+#red{
+    color: rgb(141, 34, 34);
+}
+
+span {
+    color: rgb(137, 0, 0);
+}
+
+.container {
+    display: flex;
+    min-height: 93vh;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    background-color: rgb(208, 163, 208);
+    margin: auto;
+    padding: 1em;
+    width: 650px;
+    height: 100%;
+    border: 0.5px solid pink;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgb(94, 49, 56);
+}
+
+
+/* for changeStep() */
+.step {
+    display: none;
+    &.active {
+        display: block;
+    }
+}
+
+.question-num {
+    text-align: left;
+    padding-left: 65px;
+}
+
+input { 
+    width: 300px;
+}
+
+
+/* images */
+.homepage-images, .homepage-images-second-row {
+    display: inline-block;
+}
+
+#banner {
+    position: relative;
+    bottom: 20px;
+    max-width: 80%;
+    max-height: 30vh;
+    border-radius: 5px 50px 5px 50px;
+    box-shadow: 0px 0px 10px rgb(93, 86, 100);
+}
+
+#mansion, #apt, #swamp, #house {
+    max-width: 25%;
+    padding: 1em;
+}
+
+#swamp {
+    position: relative;
+    bottom: 40px;
+    padding: 1em;
+}
+
+.img-container {
+    display: block;
+    text-align: center;
+}
+
+#mash-winner-img {
+    max-width: 50%;
+    padding: 1em;
+}
+
+#quill {
+    position: relative;
+    z-index: 1;
+    width: 15%;
+    height: 10%;
+    padding: 0;
+    margin: 0;
+}
+
+footer {
+    font-size: 10px;
+    text-align: center;
+}
+
+
+/* list.html */
+.mash-items {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.column1, .column2, .column3 {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: auto;
+}
+
+.strike {
+    transition-duration: 2s;
+    text-decoration: line-through;
+    list-style: none;
+}
+
+.winner {
+    background-color: rgb(252, 216, 216);
+}
+
+/* buttons */
+button {
+    transition-duration: 0.4s;
+    width: 25%;
+    padding: 5px;
+    border-radius: 12px;
+    font-family: goodUnicorn;
+    font-size: 20px;
+    &:hover {
+        background-color:blue;
+        color: white;
+    }
+}
+
+.disabled {
+    color: black;
+    background-color: grey;
+    cursor: not-allowed;
+}
+
+.start-mash {
+    padding: 12px 28px;
+    font-size: 25px;
+    width: 50%;
+}
+
+.submit-btn, .play-btn {
+    width: 15%;
+}
+
+.submit-btn:hover, .play-btn:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.home-btn {
+    float: left;
+}
+
+.fortune-btn, .game-btn {
+    float: right;
+}
+
+.game-btn {
+    position: relative;
+    top: 52px;
+}
